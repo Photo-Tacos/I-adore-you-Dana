@@ -4,37 +4,230 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Para Dana, con todo mi corazón</title>
+
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap');
 
     body {
       margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      background: linear-gradient(135deg, #fce7f3 0%, #e0f2fe 100%);
+      padding: 20px 0;
+      background: linear-gradient(135deg, #fce7f3, #e0f2fe);
       font-family: 'Poppins', sans-serif;
       color: #4a2c4a;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      overflow-x: hidden;
     }
 
     .envelope {
       width: 92%;
       max-width: 720px;
+      margin: 20px auto;
       background: white;
       border-radius: 24px;
       box-shadow: 0 30px 60px -15px rgba(236, 72, 153, 0.3);
       overflow: hidden;
-      position: relative;
+      animation: fadeIn 1.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
     }
 
     .header {
       background: linear-gradient(to right, #f472b6, #c084fc);
       color: white;
-      padding: 35px 50px 40px;
+      padding: 35px 40px;
       text-align: center;
       position: relative;
+    }
+
+    .header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.4rem;
+      margin: 0 0 8px 0;
+    }
+
+    .header p {
+      margin: 0;
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+
+    .date {
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+      opacity: 0.9;
+      font-style: italic;
+    }
+
+    .content {
+      padding: 40px 35px;
+      line-height: 1.85;
+      font-size: 1.08rem;
+    }
+
+    .content p {
+      margin-bottom: 1.4em;
+    }
+
+    .highlight {
+      color: #db2777;
+      font-weight: 500;
+    }
+
+    .signature {
+      margin-top: 40px;
+      text-align: right;
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5rem;
+      color: #c026d3;
+      line-height: 1.1;
+    }
+
+    .music-section {
+      background: #fdf4ff;
+      padding: 35px 40px;
+      text-align: center;
+      border-top: 1px solid #f3e8ff;
+    }
+
+    .music-section h3 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 1.9rem;
+      color: #c026d3;
+      margin: 0 0 20px 0;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      display: block;
+      margin: 0 auto 20px;
+    }
+
+    .fallback-link {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 25px;
+      background: #db2777;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    .fallback-link:hover {
+      background: #be185d;
+      transform: scale(1.05);
+    }
+
+    /* Corazones flotando */
+    .heart {
+      position: fixed;
+      bottom: -20px;
+      font-size: 22px;
+      animation: floatUp 7s linear infinite;
+      opacity: 0.55;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    @keyframes floatUp {
+      from {
+        transform: translateY(0) scale(1);
+        opacity: 0.55;
+      }
+      to {
+        transform: translateY(-120vh) scale(1.6);
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .header h1 { font-size: 2.6rem; }
+      .content { font-size: 1.02rem; padding: 30px 25px; }
+      iframe { height: 260px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="envelope">
+    <div class="header">
+      <div class="date">20 de abril de 2026</div>
+      <h1>Dana...</h1>
+      <p>Mi persona favorita en el mundo</p>
+    </div>
+
+    <div class="content">
+      <p>Mi querida Dana,</p>
+      
+      <p>Hay momentos que se me quedan grabados en el alma, y uno de ellos es cuando estoy a tu lado cantándote cancioncitas suavecitas mientras tú te vas quedando dormida, relajada, confiada, como si mi voz fuera tu lugar más seguro. Verte así, tranquila y en paz conmigo, me llena el pecho de una ternura que no sé explicar.</p>
+      
+      <p>Recuerdo perfectamente aquel día en que me miraste y me dijiste, con esa voz tan tuya: <span class="highlight">“Hay muchos como tú… pero pocos que me hagan sentir tan bien, tan especial, tan linda y con tantos sentimientos bonitos”</span>. Esas palabras se me quedaron dando vueltas en el corazón como mariposas. Porque para mí tú también eres única.</p>
+      
+      <p>Contigo todo se siente más suave, más cálido, más bonito. Contigo de verdad puedo ser como soy. No tengo que fingir que soy muy masculino, dominante o cualquier cosa que no soy. A tu lado puedo mostrar mi corazoncito sensible, mis gustitos tiernos, y esa necesidad tan grande que tengo de complacerte y hacerte feliz. Eso es lo único que me trae paz, emoción, alegría y mucho amor.</p>
+      
+      <p>Amo cuando me das momentos de mimarte, cuando me dices cosas muy tiernas y bonitas que me derriten. Me encanta que, aunque no te salga tan natural, hayas dicho cosas cursis solo por mí. Gracias por eso… sé que lo haces con cariño y eso lo hace aún más especial.</p>
+      
+      <p>Es tan lindo y cómodo dormir juntos en llamada, escuchar tu respiración tranquila mientras nos acompañamos aunque estemos lejos. También me encanta lo preocupada que eres por mí; eso no tiene precio. Aunque no me des nada que cueste dinero, no es lo que importa. Lo que de verdad valoro es todo el tiempo que me das, sabiendo lo ocupada que eres. Ese tiempo es el regalo más bonito que alguien me puede dar.</p>
+      
+      <p>Y sí, a veces soy celoso, posesivo, caprichoso y cachondo… pero es porque tú de verdad me importas. Con nadie más me pasa esto. Solo contigo me siento así de intenso, porque eres la única que me hace latir el corazón de esta forma tan fuerte.</p>
+      
+      <p>Me encanta ser la persona con la que te permites bajar la guardia y simplemente ser. Tú me das el espacio más bonito del mundo: el de poder ser yo mismo sin miedo.</p>
+      
+      <p>Quiero que sepas que este cariño que siento por ti es de los más puros y profundos que he tenido. Es un amor de amistad que a veces se siente tan grande que me tiembla el corazón como a un pollito. Un cariño que desea con toda el alma verte feliz, cuidarte y seguir creando estos momentos tan nuestros.</p>
+      
+      <p>Gracias por confiar en mí, por dejarme entrar en tus días y en tus noches. Porque tú, Dana, eres especial para mí de una forma que nadie más lo es.</p>
+      
+      <p>Te quiero mucho, muchísimo… con todo este corazoncito tierno que late más fuerte cuando estás cerca.</p>
+
+      <div class="signature">Tuyo siempre,<br>Kevin ♡</div>
+    </div>
+
+    <div class="music-section">
+      <h3>Una canción que me recuerda a ti...</h3>
+      <iframe 
+        src="https://www.youtube.com/embed/GxldQ9eX2wo?rel=0&amp;modestbranding=1" 
+        title="Stephen Sanchez - Until I Found You (Official Video)" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+      <p style="margin-top: 15px; color: #6b7280; font-size: 0.95rem;">
+        Si el reproductor no carga, abre la canción aquí:
+      </p>
+      <a href="https://www.youtube.com/watch?v=GxldQ9eX2wo" 
+         target="_blank" 
+         class="fallback-link">
+        🎵 Escuchar "Until I Found You" en YouTube
+      </a>
+    </div>
+  </div>
+
+  <!-- Corazones flotando -->
+  <script>
+    function crearCorazon() {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerText = ["♡", "♥", "♡"][Math.floor(Math.random()*3)];
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+      document.body.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 10000);
+    }
+
+    setInterval(crearCorazon, 400);
+  </script>
+
+</body>
+</html>      position: relative;
     }
 
     .header h1 {
